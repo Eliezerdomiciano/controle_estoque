@@ -89,8 +89,8 @@
     box-shadow: 0px 10px 40px #00000056;
 }
 
-.header--wrapper-gbic {
-    display:  flow-root list-item;
+.header--gbic {
+    display:  flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
@@ -106,7 +106,7 @@
 }
 
 .header--title-gbic {
-    color: #f0ffff94;
+    color: #fff0f094;
 }
 
 
@@ -116,12 +116,16 @@
 
 }
 
-.form--dados {
-    width: 120%;
+.form-dados {
+    width: 100%;
+}
+
+.form-dados-gbic {
+    width: 100%;
 }
 
 .form--button {
-    align-items:end;
+    margin-top: 1rem;
 }
 
 .tabular-wrpper {

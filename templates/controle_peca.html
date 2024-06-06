@@ -5,38 +5,42 @@
 
 
 <div class="main--content">
-    <div class="header--wrapper-gbic">
+    <div class="header--gbic">
         <div class="header--title-gbic">
             <div class="form--dados--gbic">
-                <form class="row g-3" id="form-dados">
-                    <div class="col-md-12">
-                        <label for="inputSerialNumber4" class="form-label">Serial Number</label>
-                            <input type="text" class="form-control" id="inputSerialNumber4" placeholder="Serial Number">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="inputPartNumber4" class="form-label">Part Number</label>
-                            <input type="text" class="form-control" id="inputPartNumber4" placeholder="Part Number">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="inputPosicao" class="form-label">Posição</label>
-                            <input type="text" class="form-control" id="inputPosicao" placeholder="Posição">
-                    </div>
+                    {% include 'form_gbic.html' %}
                     <div class="form--button">
-                        <a href="#" class="btn-adicionar">
+                        <a href="#" class="btn-adicionar" id="open-modal">
                             <i class="fas fa-add"></i>
                         </a>
                         <a href="#" class="btn-pesquisar">
                             <i class="fas fa-search"></i>
                         </a>
-                        <a href="#" class="btn-editar">
+                        <div id="fade" class="hide"></div>
+                        <div id="modal" class="hide">
+                            <div class="modal-header">
+                                <h4>Cadastro de Gbic's</h4>
+                                <a href="#" class="btn-close-modal" id="close-modal">
+                                    <i class="fas fa-close"></i>
+                                </a>
+                            </div>
+                            <div class="body-modal">
+                                {% include 'form_gbic.html' %}    
+                            </div>
+                          </div>
+                        <!-- <a href="#" class="btn-editar">
                             <i class="fas fa-edit"></i>
-                        </a>
-                    </div>
-              </form>
+                        </a> -->
+                        
+                    </div> 
+             </div>       
             </div>
         </div>
+        {% include 'tabela_gbic.html' %}
     </div>
+    
 </div>
+
 
 
 {% endblock %}

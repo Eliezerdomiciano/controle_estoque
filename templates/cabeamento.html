@@ -8,53 +8,40 @@
   <div class="header--wrapper">
     <div class="header--title">
       <div class="form--dados">
-        <form class="row g-3" id="form-dados">
-                  <div class="col-md-6">
-                    <label for="inputSerialNumber4" class="form-label">Serial Number</label>
-                      <input type="text" class="form-control" id="inputSerialNumber4" placeholder="Serial Number">
-                  </div>
-                  <div class="col-md-6">
-                    <label for="inputPartNumber4" class="form-label">Part Number</label>
-                      <input type="text" class="form-control" id="inputPartNumber4" placeholder="Part Number">
-                  </div>
-                  <div class="col-12">
-                    <label for="inputMoedelo" class="form-label">Modelo</label>
-                      <input type="text" class="form-control" id="inputModelo" placeholder="Modelo">
-                  </div>
-                  <div class="col-12">
-                    <label for="inputFabricante" class="form-label">Fabricante</label>
-                      <input type="text" class="form-control" id="inputFabricante" placeholder="Fabricante">
-                  </div>
-                  <div class="col-md-6">
-                    <label for="inputPosicao" class="form-label">Posição</label>
-                      <input type="text" class="form-control" id="inputPosicao" placeholder="Posição">
-                  </div>
-                  <div class="col-md-2">
-                    <label for="inputEstado" class="form-label">Estado</label>
-                      <select id="inputEstado" class="form-select">
-                        <option selected></option>
-                        <option>Disponivel</option>
-                        <option>Em Uso</option>
-                        <option>Descarte</option>
-                      </select>
+          {% include 'form_cable.html'%}
+       
+          <div class="form--button">
+            <a href="#" class="btn-adicionar" id="open-modal">
+              <i class="fas fa-add"></i>
+            </a>
+            <a href="#" class="btn-pesquisar">
+              <i class="fas fa-search"></i>
+            </a>
+            <div id="fade" class="hide"></div>
+            <div id="modal" class="hide">
+              <div class="modal-header">
+                <h4>Cadastro de Cabeamento</h4>
+                <a href="#" class="btn-close-modal" id="close-modal">
+                  <i class="fas fa-close"></i>
+                </a>
+              </div>
+              <div class="body-modal">
+                {% include 'form_cable.html' %}
                 
-                  </div>
-                  <div class="form--button">
-                          <a href="#" class="btn-adicionar">
-                              <i class="fas fa-add"></i>
-                          </a>
-                          <a href="#" class="btn-pesquisar">
-                              <i class="fas fa-search"></i>
-                          </a>
-                          <a href="#" class="btn-editar">
-                              <i class="fas fa-edit"></i>
-                          </a>
-                    </div>
-          </form>
+              </div>
+              </div>
+              <!-- <a href="#" class="btn-editar">
+                  i class="fas fa-edit"></i>
+              </a> -->
+              
+            </div>
+              
+
+          </div>
       </div>
     </div>
+    {% include 'tabela_cable.html' %}
   </div>
 </div>
 
-
-    {% endblock %}
+{% endblock %}
