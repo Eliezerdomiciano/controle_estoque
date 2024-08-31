@@ -1,21 +1,20 @@
-<table id="tblEditavel">
+<table id="tblEditavelCable">
     <thead>
     <tr>
-        <th id="SerialNumber">Serial Number</th>
-        <th id="ParteNumber">Part Number</th>
-        <th id="Posicao">Posição</th>
-        <th id="tipo">Tipo de Cabo</th>
-        
+        <th id="serial_number">Serial Number</th>
+        <th id="part_number">Part Number</th>
+        <th id="position">Posição</th>
+        <th id="cable_type">Tipo de Cabo</th>
     </tr>
-
+    </thead>
     <tbody>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
+    {% for cable in cables %}
+        <tr data-id="{{ cable.id }}">
+            <td id="serial_number">{{ cable.serial_number }}</td>
+            <td id="part_number">{{ cable.part_number }}</td>
+            <td id="position">{{ cable.position }}</td>
+            <td id="cable_type">{{ cable.cable_type }}</td>
         </tr>
+    {% endfor %}
     </tbody>
-    
-</thead>
 </table>

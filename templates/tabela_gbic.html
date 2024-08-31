@@ -1,25 +1,24 @@
-<table id="tblEditavel">
+<table id="tblEditavelGBIC">
     <thead>
     <tr>
-        <th id="SerialNumber">Serial Number</th>
-        <th id="ParteNumber">Part Number</th>
-        <th id="Modelo">Modelo</th>
-        <th id="Fabricante">Fabricante</th>
-        <th id="Posicao">Posição</th>
-        <th id="Estado">Estado</th>
-        
+        <th id="serial_number">Serial Number</th>
+        <th id="part_number">Part Number</th>
+        <th id="model">Modelo</th>
+        <th id="manufacturer">Fabricante</th>
+        <th id="position">Posição</th>
+        <th id="status">Estado</th>
     </tr>
-
+    </thead>
     <tbody>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
+    {% for gbic in gbics %}
+        <tr data-id="{{ gbic.id }}">
+            <td id="serial_number">{{ gbic.serial_number }}</td>
+            <td id="part_number">{{ gbic.part_number }}</td>
+            <td id="model">{{ gbic.model }}</td>
+            <td id="manufacturer">{{ gbic.manufacturer }}</td>
+            <td id="position">{{ gbic.position }}</td>
+            <td id="status">{{ gbic.status }}</td>
         </tr>
+    {% endfor %}
     </tbody>
-    
-</thead>
 </table>

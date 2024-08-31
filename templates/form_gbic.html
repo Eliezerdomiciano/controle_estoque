@@ -1,31 +1,31 @@
-<form class="row g-3" id="form-dados-gbic">
+<form class="row g-3" id="form-dados-gbic" method="POST" action="{{ url_for('controle_peca') }}">
     <div class="col-md-6">
-      <label for="inputSerialNumber4" class="form-label">Serial Number</label>
-        <input type="text" class="form-control" id="inputSerialNumber4" placeholder="Serial Number">
+        <label for="inputSerialNumber4" class="form-label">Serial Number</label>
+        <input type="text" class="form-control" id="inputSerialNumber4" name="serial_number" placeholder="Serial Number" required>
     </div>
     <div class="col-md-6">
-      <label for="inputPartNumber4" class="form-label">Part Number</label>
-        <input type="text" class="form-control" id="inputPartNumber4" placeholder="Part Number">
+        <label for="inputPartNumber4" class="form-label">Part Number</label>
+        <input type="text" class="form-control" id="inputPartNumber4" name="part_number" placeholder="Part Number" required>
     </div>
     <div class="col-12">
-      <label for="inputMoedelo" class="form-label">Modelo</label>
-        <input type="text" class="form-control" id="inputModelo" placeholder="Modelo">
+        <label for="inputModelo" class="form-label">Modelo</label>
+        <input type="text" class="form-control" id="inputModelo" name="model" placeholder="Modelo" required>
     </div>
     <div class="col-12">
-      <label for="inputFabricante" class="form-label">Fabricante</label>
-        <input type="text" class="form-control" id="inputFabricante" placeholder="Fabricante">
+        <label for="inputFabricante" class="form-label">Fabricante</label>
+        <input type="text" class="form-control" id="inputFabricante" name="manufacturer" placeholder="Fabricante" required>
     </div>
     <div class="col-md-6">
-      <label for=" inputPosicao" class="form-label">Posição</label>
-        <input type="text" class="form-control" id="inputPosicao" placeholder="Posição">
+        <label for="inputPosicao" class="form-label">Posição</label>
+        <input type="text" class="form-control" id="inputPosicao" name="position" placeholder="Posição" required>
     </div>
     <div class="col-md-2">
-      <label for="inputEstado" class="form-label">Estado</label>
-        <select id="inputEstado" class="form-select">
-          <option selected></option>
-          <option>Disponivel</option>
-          <option>Em Uso</option>
-          <option>Descarte</option>
+        <label for="inputEstado" class="form-label">Estado</label>
+        <select id="inputEstado" class="form-select" name="status" required>
+            <option selected></option>
+            <option>Disponivel</option>
+            <option>Em Uso</option>
+            <option>Descarte</option>
         </select>
     </div>
 </form>

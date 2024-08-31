@@ -1,23 +1,23 @@
-<form class="row g-3" id="form-dados-cable">
+<form class="row g-3" id="form-dados-cable" method="POST" action="{{ url_for('cable') }}">
     <div class="col-md-12">
         <label for="inputSerialNumber4" class="form-label">Serial Number</label>
-            <input type="text" class="form-control" id="inputSerialNumber4" placeholder="Serial Number">
+        <input type="text" class="form-control" id="inputSerialNumber4" name="serial_number" placeholder="Serial Number" required>
     </div>
     <div class="col-md-6">
         <label for="inputPartNumber4" class="form-label">Part Number</label>
-            <input type="text" class="form-control" id="inputPartNumber4" placeholder="Part Number">
+        <input type="text" class="form-control" id="inputPartNumber4" name="part_number" placeholder="Part Number" required>
     </div>
     <div class="col-md-6">
         <label for="inputPosicao" class="form-label">Posição</label>
-            <input type="text" class="form-control" id="inputPosicao" placeholder="Posição">
+        <input type="text" class="form-control" id="inputPosicao" name="position" placeholder="Posição" required>
     </div>
     <div class="col-md-2">
         <label for="inputTipo" class="form-label">Tipo de Cabo</label>
-          <select id="inputTipo" class="form-select">
+        <select id="inputTipo" class="form-select" name="cable_type" required>
             <option selected></option>
             <option>Twinx</option>
             <option>UTP</option>
             <option>Fibra</option>
-          </select>
-      </div>
+        </select>
+    </div>
 </form>
